@@ -50,6 +50,14 @@ Model resolution order in Claude Code: `CLAUDE_CODE_SUBAGENT_MODEL` env var → 
 
 ## Use it
 
+The doctrine applies automatically **only when the session runs on Fable** — that's where the cost split exists. On any other model the skill stays dormant unless you explicitly ask, or run the bundled command:
+
+```
+/orchestrate rework the fire tower DOT, add the tornado pull, fix the save-slot bug
+```
+
+`/orchestrate <task(s)>` forces the full architect flow — decompose, delegate, commit-gated parallel fan-out, integrate, verify — on any session model.
+
 With the session on Fable, just ask for work — the orchestration skill routes it:
 
 ```
