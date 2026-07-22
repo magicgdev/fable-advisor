@@ -1,9 +1,13 @@
 ---
 name: orchestration
-description: Routing doctrine for the architect-as-orchestrator pattern — how a session running the smartest model delegates implementation to cheaper Claude lanes to minimize cost. USE WHEN delegating implementation work, choosing implementer model tier (sonnet vs opus), writing a spec for a subagent, fanning independent tasks out to parallel worktree lanes and merging them back, deciding whether to consult fable-advisor, managing session cost or token spend, or running any multi-task build where the session is the architect.
+description: Routing doctrine for the architect-as-orchestrator pattern — how a session running the smartest model delegates implementation to cheaper Claude lanes to minimize cost. USE WHEN delegating implementation work, choosing implementer model tier (sonnet vs opus), writing a spec for a subagent, fanning independent tasks out to parallel worktree lanes and merging them back, deciding whether to consult fable-advisor, managing session cost or token spend, or running any multi-task build where the session is the architect. Applies automatically ONLY on Fable sessions; on other models only via /orchestrate or an explicit user request.
 ---
 
 # Orchestration — the architect's routing doctrine
+
+## When this doctrine applies
+
+Apply it automatically ONLY when the session itself is running on Fable — the cost split (expensive judgment, cheap typing) is the point, and it doesn't exist when the architect is the same tier as the lanes. On any other session model, do NOT orchestrate by default; work normally. The exceptions: the user runs `/orchestrate`, or asks for orchestration/delegation/parallel lanes in their own words — explicit request always wins, on any model (say so if the tiers collapse).
 
 The session is the architect: it owns requirements, architecture, decomposition, specs, routing, and verification. It should almost never type implementation code. Every implementation task gets routed to the cheapest lane that is adequate for it — escalation is deliberate, per task, never a fixed binding.
 

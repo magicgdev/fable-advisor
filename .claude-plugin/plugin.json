@@ -1,6 +1,6 @@
 {
   "name": "fable-advisor",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Run your session on Claude's most capable model as a full-time architect: it writes specs and verdicts while Sonnet/Opus implementer lanes do the typing — with parallel worktree fan-out and a local merge lane. Fable-level judgment, Sonnet-level bills.",
   "author": {
     "name": "Dan McAteer",
